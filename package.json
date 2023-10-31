@@ -4,7 +4,7 @@
   "description": "This website is about what I did, what I do and what I wanna do.",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./resources/css/style.css --watch"
+    "build": "tailwindcss -i ./src/input.css -o ./resources/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
