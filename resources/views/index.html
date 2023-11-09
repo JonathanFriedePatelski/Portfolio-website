@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,57 @@
   <link rel="stylesheet" href="../css/output.css">
 </head>
 
-<body class="bg-gray-800">
-  <div class="flex flex-col h-screen">
+<body class="bg-gray-800 font-body">
+  <div class="flex flex-col">
     <header>
-        <nav class="flex items-center justify-between flex-wrap text-teal-500  outline outline-offset-2 outline-teal-500 shadow-xl shadow-teal-600 p-6">
-            <div class="w-full block flex-grow justify-items-center lg:flex lg:items-center lg:w-auto">
-              <div class="text-xl lg:flex-grow">
-                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 mr-4 hover:underline">
-                  Docs
-                </a>
-                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 mr-4 hover:underline">
-                  Examples
-                </a>
-                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 hover:underline">
-                  Blog
-                </a>
-              </div>
-              <div>
-                <a href="#" class="inline-block text-sm px-4 py-2 leading-none rounded bg-teal-800 text-teal-500 hover:text-teal-400 hover:bg-teal-600 hover:outline mt-4 lg:mt-0">Download</a>
-              </div>
-            </div>
-          </nav>
+      <nav
+        class="flex items-center justify-between flex-wrap text-teal-500  outline outline-offset-2 outline-teal-500 shadow-xl shadow-teal-600 p-6">
+        <div class="w-full block flex-grow justify-items-center lg:flex lg:items-center lg:w-auto">
+          <div class="text-xl lg:flex-grow">
+            <a href="#"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 mr-4 hover:underline">
+              Docs
+            </a>
+            <a href="#"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 mr-4 hover:underline">
+              Examples
+            </a>
+            <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 hover:underline">
+              Blog
+            </a>
+          </div>
+          <div>
+            <a href="#"
+              class="inline-block text-sm px-4 py-2 leading-none rounded bg-teal-800 text-teal-500 hover:text-teal-400 hover:bg-teal-600 hover:outline mt-4 lg:mt-0">Download</a>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main class="flex-1 overflow-y-auto">
-      <section class="py-10">
-        <h1>Jonathan Patelski</h1>
+    <main class=" overflow-y-auto">
+      <section id="about" class="">
+        <div class="grid grid-cols-12 gap-0 w-full justify-center bg-blue-900">
+          <div class="col-span-12 md:col-span-6 lg:col-span-6 bg-red-300">
+            <div class="flex flex-col justify-center items-start p-4">
+              <span class="text-8xl font-bold">Jonathan Patelski</span>
+              <span class="text-4xl font-bold">FullStackDeveloper</span>
+            </div>
+          </div>
+
+          <!-- Column -->
+          
+          <div class="col-span-12 md:col-span-6 lg:col-span-6 justify-center bg-green-400">
+            <img class="object-contain" src="../img/boy.png" alt="Jonathan">
+            <h2 class="text-4xl"><a href="#">Contact Me</a></h2>
+          </div>
+
+      
+        </div>
       </section>
-      <section>
-        <h1>About</h1>
-        <div class="container"></div>
+      <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="container">
+          <!-- item go here -->
+        </div>
       </section>
     </main>
     <footer
@@ -46,6 +69,7 @@
       </div>
     </footer>
   </div>
-  </div>
+
 </body>
+
 </html>
