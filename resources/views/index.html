@@ -5,54 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="../css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
-  <body class="bg-gray-800 font-body">
-    <div class="flex flex-col">
-      <header>
-        <nav
-          class="flex items-center justify-between flex-wrap text-teal-500 outline outline-offset-2 outline-teal-500 shadow-xl shadow-teal-600 p-6"
-        >
-          <div
-            class="w-full block flex-grow justify-items-center lg:flex lg:items-center lg:w-auto"
-          >
-            <div class="text-xl lg:flex-grow">
+  <body class="bg-gray-800 font-body h-screen">
+    <header class="bg-gray-800">
+      <nav
+        class="flex flex-col lg:flex-row justify-between items-center w-full text-teal-500 outline outline-offset-2 outline-teal-500 shadow-xl shadow-teal-600 p-6"
+      >
+        <div class="flex items-center mb-4 lg:mb-0">
+          <p href="#" class="text-xl font-bold mr-8">Jonathan Patelski</p>
+
+          <ul class="hidden lg:flex items-center gap-4 ml-4">
+            <li>
               <a
                 href="#"
-                class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 mr-4 hover:underline"
+                class="block lg:inline-block text-teal-200 hover:text-teal-300 mr-4 hover:underline"
               >
                 Docs
               </a>
+            </li>
+            <li>
               <a
                 href="#"
-                class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 mr-4 hover:underline"
+                class="block lg:inline-block text-teal-200 hover:text-teal-300 mr-4 hover:underline"
               >
                 Examples
               </a>
+            </li>
+            <li>
               <a
                 href="#"
-                class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-teal-300 hover:underline"
+                class="block lg:inline-block text-teal-200 hover:text-teal-300 hover:underline"
               >
                 Blog
               </a>
-            </div>
-            <div>
-              <a
-                href="#"
-                class="inline-block text-sm px-4 py-2 leading-none rounded bg-teal-800 text-teal-500 hover:text-teal-400 hover:bg-teal-600 hover:outline mt-4 lg:mt-0"
-                >Download</a
-              >
-            </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:flex-grow flex items-center justify-end">
+          <div class="lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none absolute right-0 top-0 m-4 text-[1.2rem]">
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
-        </nav>
-      </header>
-    </div>
+
+          <div
+            id="mobile-menu-container"
+            class="hidden justify-center md:inline-block text-sm px-4 py-2 leading-none rounded bg-teal-800 text-teal-500 hover:text-teal-400 hover:bg-teal-600 hover:outline mt-4 lg:mt-0 ml-4"
+          >
+            <button>Cv Download</button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="absolute flex flex-col items-center left-0 top-0 w-[100vw] h-[50vh] lg:hidden hidden bg-gray-800"
+      >
+        <div class="flex justify-center items-center mb-8 mt-6 lg:mb-0">
+          <p href="#" class="text-teal-500 text-xl font-bold ">Jonathan Patelski</p>
+        </div>
+        <ul
+					id="item-links"
+          class="flex flex-col items-center gap-4 mt-4 bg-gray-800 z-50"
+        >
+          <li>
+            <a
+              href="#"
+              class="block text-teal-200 hover:text-teal-300 hover:underline"
+            >
+              Docs
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-teal-200 hover:text-teal-300 hover:underline"
+            >
+              Examples
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block text-teal-200 hover:text-teal-300 hover:underline"
+            >
+              Blog
+            </a>
+          </li>
+        </ul>
+        <div
+          id="mobile-menu-container"
+          class="max-w-[40vw] text-sm px-4 py-2 leading-none rounded bg-teal-800 text-teal-500 hover:text-teal-400 hover:bg-teal-600 hover:outline mt-8"
+        >
+          <button class="block w-full text-left">
+            <span class="block font-bold">Cv Download</span>
+          </button>
+        </div>
+        <button id="close-button" class="absolute right-0 top-1 m-4 text-[1.5rem]">
+          <i class="fa-solid fa-xmark text-teal-500"></i>
+        </button>
+      </div>
+    </header>
+
     <main>
       <section id="about" class="">
-        <div class="grid grid-cols-2 gap-0 lg:grid-cols-2 md:grid-cols-2 w-full justify-center bg-blu-900">
-          <div
-            class="bg-re-300 flex justify-center justify-items-center"
-          >
+        <div
+          class="grid grid-cols-2 gap-0 lg:grid-cols-2 md:grid-cols-2 w-full justify-center bg-blu-900"
+        >
+          <div class="bg-re-300 flex justify-center justify-items-center">
             <div class="flex flex-col justify-center items-start p-4">
               <span class="text-8xl font-bold text-teal-500"
                 >Jonathan Patelski</span
@@ -63,25 +133,23 @@
             </div>
           </div>
 
-          <!-- Column -->
-
-          <div
-            class=" flex flex-wrap justify-center bg-gree-400"
-          >
+          <div class="flex flex-wrap justify-center bg-gree-400">
             <img
               class="object-contain w-[80%] h-auto"
               src="../img/selfportret.PNG"
               alt="Jonathan"
             />
-            <h2 class="text-4xl text-gray-300 p-10"><a href="#">Contact Me</a></h2>
+            <h2 class="text-4xl text-gray-300 p-10">
+              <a href="#">Contact Me</a>
+            </h2>
           </div>
         </div>
       </section>
       <section id="portfolio" class="bg-re-500">
-        <h2 class="text-8xl text-white font-bold text-center p-10">Portfolio</h2>
-        <div class="container">
-          <!-- item go here -->
-        </div>
+        <h2 class="text-8xl text-white font-bold text-center p-10">
+          Portfolio
+        </h2>
+        <div class="container"></div>
       </section>
     </main>
     <footer
@@ -94,5 +162,25 @@
         >
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let menuToggle = document.getElementById("menu-toggle");
+        let mobileMenu = document.getElementById("mobile-menu");
+				let closeButton = document.getElementById("close-button");
+				let itemLinks = document.getElementById("item-links");
+
+        menuToggle.addEventListener("click", function () {
+          // Toggle the visibility of the mobile menu
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        closeButton.addEventListener("click", function () {
+					mobileMenu.classList.toggle("hidden");
+        });
+				itemLinks.addEventListener("click", function () {
+					mobileMenu.classList.toggle("hidden");
+				})
+      });
+    </script>
   </body>
 </html>
