@@ -52,14 +52,17 @@
 
         <div class="lg:flex-grow flex items-center justify-end">
           <div class="lg:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none absolute right-0 top-0 m-4 text-[1.2rem]">
+            <button
+              id="menu-toggle"
+              class="text-white focus:outline-none absolute right-0 top-0 m-4 text-[1.2rem]"
+            >
               <i class="fas fa-bars"></i>
             </button>
           </div>
 
           <div
             id="mobile-menu-container"
-            class="hidden justify-center md:inline-block text-sm px-4 py-2 leading-none rounded bg-teal-800 text-teal-500 hover:text-teal-400 hover:bg-teal-600 hover:outline mt-4 lg:mt-0 ml-4"
+            class="hidden sm:max-lg:hidden justify-center sm:inline-block text-sm px-4 py-2 leading-none rounded bg-teal-800 text-teal-500 hover:text-teal-400 hover:bg-teal-600 hover:outline mt-4 lg:mt-0 ml-4"
           >
             <button>Cv Download</button>
           </div>
@@ -72,10 +75,12 @@
         class="absolute flex flex-col items-center left-0 top-0 w-[100vw] h-[50vh] lg:hidden hidden bg-gray-800"
       >
         <div class="flex justify-center items-center mb-8 mt-6 lg:mb-0">
-          <p href="#" class="text-teal-500 text-xl font-bold ">Jonathan Patelski</p>
+          <p href="#" class="text-teal-500 text-xl sm:text-3xl font-bold">
+            Jonathan Patelski
+          </p>
         </div>
         <ul
-					id="item-links"
+          id="item-links"
           class="flex flex-col items-center gap-4 mt-4 bg-gray-800 z-50"
         >
           <li>
@@ -111,42 +116,50 @@
             <span class="block font-bold">Cv Download</span>
           </button>
         </div>
-        <button id="close-button" class="absolute right-0 top-1 m-4 text-[1.5rem]">
+        <button
+          id="close-button"
+          class="absolute right-0 top-1 m-4 text-[1.5rem]"
+        >
           <i class="fa-solid fa-xmark text-teal-500"></i>
         </button>
       </div>
     </header>
 
     <main>
-      <section id="about" class="">
+      <section id="hero" class="p-0 h-full">
         <div
-          class="grid grid-cols-2 gap-0 lg:grid-cols-2 md:grid-cols-2 w-full justify-center bg-blu-900"
+          class="flex flex-col sm:flex-row items-center md:columns-2 text-center sm:text-left bg-blu-900"
         >
-          <div class="bg-re-300 flex justify-center justify-items-center">
-            <div class="flex flex-col justify-center items-start p-4">
-              <span class="text-8xl font-bold text-teal-500"
+          <div
+            class="lg:col-span-6 sm:col-span-6 bg-re-300 flex justify-center justify-items-center"
+          >
+            <div class="flex flex-col sm:items-start p-4">
+              <span class="text-5xl mb-6 mt-8 font-bold text-teal-500"
                 >Jonathan Patelski</span
               >
-              <span class="text-4xl font-bold text-white"
-                >FullStackDeveloper</span
+              <span class="text-2xl font-bold text-white"
+                >FullStack Developer</span
               >
             </div>
           </div>
 
-          <div class="flex flex-wrap justify-center bg-gree-400">
-            <img
-              class="object-contain w-[80%] h-auto"
-              src="../img/selfportret.PNG"
-              alt="Jonathan"
-            />
-            <h2 class="text-4xl text-gray-300 p-10">
+          <div class="bg-gree-400 text-center">
+            <div class="sm:col-span-6">
+              <img
+                class="object-contain h-auto md:w-50"
+                src="../img/selfportret.PNG"
+                alt="Jonathan"
+              />
+            </div>
+
+            <h2 class="text-3xl text-gray-300 p-10">
               <a href="#">Contact Me</a>
             </h2>
           </div>
         </div>
       </section>
-      <section id="portfolio" class="bg-re-500">
-        <h2 class="text-8xl text-white font-bold text-center p-10">
+      <section id="portfolio" class="bg-red-300">
+        <h2 class="text-4xl text-white font-bold text-center p-10">
           Portfolio
         </h2>
         <div class="container"></div>
@@ -166,8 +179,8 @@
       document.addEventListener("DOMContentLoaded", function () {
         let menuToggle = document.getElementById("menu-toggle");
         let mobileMenu = document.getElementById("mobile-menu");
-				let closeButton = document.getElementById("close-button");
-				let itemLinks = document.getElementById("item-links");
+        let closeButton = document.getElementById("close-button");
+        let itemLinks = document.getElementById("item-links");
 
         menuToggle.addEventListener("click", function () {
           // Toggle the visibility of the mobile menu
@@ -175,11 +188,11 @@
         });
 
         closeButton.addEventListener("click", function () {
-					mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("hidden");
         });
-				itemLinks.addEventListener("click", function () {
-					mobileMenu.classList.toggle("hidden");
-				})
+        itemLinks.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
       });
     </script>
   </body>
