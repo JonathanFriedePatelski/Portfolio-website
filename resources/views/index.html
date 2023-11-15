@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="../js/index.js" defer></script>
   </head>
 
   <body class="bg-gray-800 font-body h-screen">
@@ -131,7 +132,7 @@
           class="flex flex-col sm:flex-row items-center md:columns-2 text-center sm:text-left bg-blu-900"
         >
           <div
-            class="lg:col-span-6 sm:col-span-6 bg-re-300 flex justify-center justify-items-center"
+            class="lg:col-span-6 sm:col-span-6 bg-re-300 flex justify-center justify-items-center w-[90%]"
           >
             <div class="flex flex-col sm:items-start p-4">
               <span class="text-5xl mb-6 mt-8 font-bold text-teal-500"
@@ -140,6 +141,20 @@
               <span class="text-2xl font-bold text-white"
                 >FullStack Developer</span
               >
+              <div
+                class="text-3xl sm:text-4xl text-white flex justify-center gap-16 mt-4 text-center"
+              >
+                <a
+                  href="https://github.com/JonathanFriedePatelski"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/jonathan-patelski-547839293/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
             </div>
           </div>
 
@@ -152,9 +167,10 @@
               />
             </div>
 
-            <h2 class="text-3xl text-gray-300 p-10">
-              <a href="#">Contact Me</a>
-            </h2>
+            <div
+              id="emailLinkContainer"
+              class="hover:text-gray-200 text-3xl text-gray-300 mb-1 p-10"
+            ></div>
           </div>
         </div>
       </section>
@@ -175,25 +191,5 @@
         >
       </div>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let menuToggle = document.getElementById("menu-toggle");
-        let mobileMenu = document.getElementById("mobile-menu");
-        let closeButton = document.getElementById("close-button");
-        let itemLinks = document.getElementById("item-links");
-
-        menuToggle.addEventListener("click", function () {
-          // Toggle the visibility of the mobile menu
-          mobileMenu.classList.toggle("hidden");
-        });
-
-        closeButton.addEventListener("click", function () {
-          mobileMenu.classList.toggle("hidden");
-        });
-        itemLinks.addEventListener("click", function () {
-          mobileMenu.classList.toggle("hidden");
-        });
-      });
-    </script>
   </body>
 </html>
