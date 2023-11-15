@@ -4,3 +4,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .card {
+        @apply outline outline-offset-2 outline-teal-500 shadow-xl shadow-teal-600 rounded-xl;
+    }
+}
