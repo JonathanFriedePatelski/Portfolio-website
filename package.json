@@ -4,8 +4,7 @@
   "description": "This website is about what I did, what I do and what I wanna do.",
   "main": "index.js",
   "scripts": {
-    "build": "postcss ./src/input.css -o ./resources/css/output.css --watch",
-    "watch": "postcss ./src/input.css -o ./resources/css/output.css"
+    "watch": "npx tailwindcss -i ./input.css -o ./resources/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
