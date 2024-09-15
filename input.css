@@ -8,5 +8,16 @@
 @layer components {
     .card {
         @apply outline outline-offset-2 outline-teal-500 shadow-xl shadow-teal-600 rounded-xl;
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        height: 600px;
+    }
+
+    .img-item {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
     }
 }
+
